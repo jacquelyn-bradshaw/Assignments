@@ -48,7 +48,7 @@ Here is a screenshot of this command in use:
 
 To create a branch named development you run the command `git branch development`
 
-Here is a screenshot showing use of the commands for creating a branch, listing your branches and switching branch.
+Here is a screenshot showing use of the commands for creating a branch, listing your branches and switching branch:
 
 <img src="images/creating-a-branch-screenshot.png" alt="Screenshot of me creating a branch" width="600" height="210">
 
@@ -61,6 +61,14 @@ I have switiched to my development branch and added files to my local repository
 If I had wanted to just add the image to my local resposity on it's own I would use the command `git add images/creating_a_branch_screenshot.png`
 
 ### Adding commits with meaningful messages
+
+Here are some screenshots of some of the commits I have made:
+
+<img src="images/commit-message-screenshot-1.png" alt="Screenshot of me adding a commit message" width="700" height="100">
+
+<img src="images/commit-message-screenshot-2.png" alt="Screenshot of me adding a commit message" width="700" height="180">
+
+<img src="images/commit-message-screenshot-3.png" alt="Screenshot of me adding a commit message" width="700" height="130">
 
 ### .gitignore
 
