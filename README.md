@@ -25,13 +25,13 @@ Previous repositories I have created can be found **[here](https://github.com/ja
 ## Assignment 1 Tasks
 
 - [x] Create a private repository
-- [] Create a README.md
+- [x] Create a README.md
 - [x] Use at least 6 different markdown text formatting features
 - [x] Demonstrate checking the status
 - [x] Demonstrate creating a branch
 - [x] Demonstrate adding files to a branch
-- [] Demonstrate adding commits with meaningful messages
-- [] Demonstrate opening a pull request
+- [x] Demonstrate adding commits with meaningful messages
+- [x] Demonstrate opening a pull request
 - [] Demonstrate merging and deploying to main branch
 - [x] Create .gitignore
 - [x] Create requirements.txt
@@ -69,6 +69,14 @@ Here are some screenshots of some of the commits I have made:
 <img src="images/commit-message-screenshot-2.png" alt="Screenshot of me adding a commit message" width="700" height="180">
 
 <img src="images/commit-message-screenshot-3.png" alt="Screenshot of me adding a commit message" width="700" height="130">
+
+### Opening a pull request
+
+Here are some screenshots of me opening a pull request:
+
+<img src="images/ready-for-pull-request-screenshot.png" alt="Screenshot of GitHub showing a pull request button" width="700" height="400">
+
+<img src="images/open-a-pull-request-screenshot.png" alt="Screenshot of the details I have added to my pull request" width="700" height="600">
 
 ### .gitignore
 
