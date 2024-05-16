@@ -29,7 +29,7 @@ Previous repositories I have created can be found **[here](https://github.com/ja
 - [x] Use at least 6 different markdown text formatting features
 - [x] Demonstrate checking the status
 - [x] Demonstrate creating a branch
-- [] Demonstrate adding files to a branch
+- [x] Demonstrate adding files to a branch
 - [] Demonstrate adding commits with meaningful messages
 - [] Demonstrate opening a pull request
 - [] Demonstrate merging and deploying to main branch
@@ -42,7 +42,7 @@ To check the status you run the command `git status`
 
 Here is a screenshot of this command in use:
 
-<img src="images/git-status-screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="300">
+<img src="images/git-status-screenshot.png" alt="Screenshot of me checking my git status" width="600" height="300">
 
 ### Creating a branch
 
@@ -50,9 +50,17 @@ To create a branch named development you run the command `git branch development
 
 Here is a screenshot showing use of the commands for creating a branch, listing your branches and switching branch.
 
-<img src="images/creating-a-branch-screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="210">
+<img src="images/creating-a-branch-screenshot.png" alt="Screenshot of me creating a branch" width="600" height="210">
 
 ### Adding files to a branch
+
+I have switiched to my development branch and added files to my local repository in Visual Studio Code. To stage the files you use the command `git add .` to add all changes.
+
+<img src="images/adding-a-file-to-a-branch-screenshot.png" alt="Screenshot of me adding a file to a branch" width="600" height="350">
+
+If I had wanted to just add the image to my local resposity on it's own I would use the command `git add images/creating_a_branch_screenshot.png`
+
+### Adding commits with meaningful messages
 
 ### .gitignore
 
