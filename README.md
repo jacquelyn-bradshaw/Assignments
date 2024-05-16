@@ -6,7 +6,7 @@ In this readme you will find the descriptions and screenshots I have created for
 
 For the past 5 years I have been on a career break to look after my children. This has always been my ambition to create a long lasting relationship with them whilst they are young. My son loves :tractor: and my daughter loves :fairy:.
 
-![Image of my two children, Nathan and Sophie](/images/my_children.png)
+![Image of my two children, Nathan and Sophie](/images/my-children.png)
 
 During that time I have had the opportunity to learn how to switch careers and what I am best suited at. I have spent the past 15 months in the evenings learning :student: how to code including:
 
@@ -42,7 +42,7 @@ To check the status you run the command `git status`
 
 Here is a screenshot of this command in use:
 
-<img src="images/git_status_screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="300">
+<img src="images/git-status-screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="300">
 
 ### Creating a branch
 
@@ -50,7 +50,7 @@ To create a branch named development you run the command `git branch development
 
 Here is a screenshot showing use of the commands for creating a branch, listing your branches and switching branch.
 
-<img src="images/creating_a_branch_screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="210">
+<img src="images/creating-a-branch-screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="210">
 
 ### Adding files to a branch
 
@@ -58,7 +58,7 @@ Here is a screenshot showing use of the commands for creating a branch, listing 
 
 .gitignore is a file that can be added to the root directory of your repository. It stops files or folders you have added to the .gitignore file from being committed to your repository. I have created a ignore_me folder and added it to my .gitignore file so that it is not committed. I have previously used .gitignore files to ensure that node modules are not committed.
 
-<img src="images/gitignore_screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="400" height="150">
+<img src="images/gitignore-screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="400" height="150">
 
 ### requirements.txt
 
