@@ -32,7 +32,7 @@ Previous repositories I have created can be found **[here](https://github.com/ja
 - [x] Demonstrate adding files to a branch
 - [x] Demonstrate adding commits with meaningful messages
 - [x] Demonstrate opening a pull request
-- [] Demonstrate merging and deploying to main branch
+- [x] Demonstrate merging and deploying to main branch
 - [x] Create .gitignore
 - [x] Create requirements.txt
 
@@ -77,6 +77,14 @@ Here are some screenshots of me opening a pull request:
 <img src="images/ready-for-pull-request-screenshot.png" alt="Screenshot of GitHub showing a pull request button" width="700" height="400">
 
 <img src="images/open-a-pull-request-screenshot.png" alt="Screenshot of the details I have added to my pull request" width="700" height="600">
+
+## Merging and deploying to main branch
+
+Here are some screenshots of me merging to the main branch:
+
+<img src="images/merge-pull-request-screenshot.png" alt="Screenshot showing no conflicts and merge pull request button" width="600" height="250">
+
+<img src="images/pull-request-successfull-screenshot.png" alt="Screenshot showing no conflicts and merge pull request button" width="600" height="80">
 
 ### .gitignore
 
