@@ -28,9 +28,10 @@ Previous repositories I have created can be found **[here](https://github.com/ja
 - [] Create a README.md
 - [x] Use at least 6 different markdown text formatting features
 - [x] Demonstrate checking the status
-- [] Demonstrate creating a branch
+- [x] Demonstrate creating a branch
 - [] Demonstrate adding files to a branch
-- [] Demonstrate adding commits with meaningful messages Opening a pull request
+- [] Demonstrate adding commits with meaningful messages
+- [] Demonstrate opening a pull request
 - [] Demonstrate merging and deploying to main branch
 - [x] Create .gitignore
 - [x] Create requirements.txt
@@ -42,6 +43,16 @@ To check the status you run the command `git status`
 Here is a screenshot of this command in use:
 
 <img src="images/git_status_screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="300">
+
+### Creating a branch
+
+To create a branch named development you run the command `git branch development`
+
+Here is a screenshot showing use of the commands for creating a branch, listing your branches and switching branch.
+
+<img src="images/creating_a_branch_screenshot.png" alt="Screenshot of me setting up my .gitignore file" width="600" height="210">
+
+### Adding files to a branch
 
 ### .gitignore
 
