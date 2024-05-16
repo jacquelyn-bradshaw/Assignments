@@ -4,7 +4,7 @@ A GitHub repository to store my CFG Degree assignments.
 
 In this readme you will find the descriptions and screenshots I have created for Assignment 1.
 
-For the past 5 years I have been on a career break to look after my children. This has always been my ambition to create a long lasting relationship with them whilst they are young. My son loves :tractor: and my daughter loves :fairy:.
+For the past 5 years I have been on a career break to look after my children. This has always been my ambition to create a long lasting relationship with them whilst they are young. My son loves tractors :tractor: and my daughter loves fairies :fairy:.
 
 ![Image of my two children, Nathan and Sophie](/images/my-children.png)
 
@@ -72,7 +72,7 @@ Here are some screenshots of some of the commits I have made:
 
 ### Opening a pull request
 
-Here are some screenshots of me opening a pull request:
+Here are some screenshots of me opening a pull request and giving the request a relevant title and description:
 
 <img src="images/ready-for-pull-request-screenshot.png" alt="Screenshot of GitHub showing a pull request button" width="700" height="400">
 
@@ -84,7 +84,7 @@ Here are some screenshots of me merging to the main branch:
 
 <img src="images/merge-pull-request-screenshot.png" alt="Screenshot showing no conflicts and merge pull request button" width="600" height="250">
 
-<img src="images/pull-request-successfull-screenshot.png" alt="Screenshot showing no conflicts and merge pull request button" width="600" height="80">
+<img src="images/pull-request-successfull-screenshot.png" alt="Screenshot showing the merge has been successful and pull request closed" width="600" height="80">
 
 ### .gitignore
 
