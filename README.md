@@ -62,7 +62,7 @@ If I had wanted to just add the image to my local resposity on it's own I would 
 
 ### Adding commits with meaningful messages
 
-Here are some screenshots of some of the commits I have made:
+I try to make sure that all my commit messages explain what I have added, changed or removed. To add a commit you use the command `git commit -m ""` with your message inside the quotes. Here are some screenshots of some of the commits I have made:
 
 <img src="images/commit-message-screenshot-1.png" alt="Screenshot of me adding a commit message" width="700" height="100">
 
@@ -80,7 +80,7 @@ Here are some screenshots of me opening a pull request and giving the request a 
 
 ## Merging and deploying to main branch
 
-Here are some screenshots of me merging to the main branch:
+As I had no conflicts I was able to merge without making any changes. Here are some screenshots of me merging to the main branch:
 
 <img src="images/merge-pull-request-screenshot.png" alt="Screenshot showing no conflicts and merge pull request button" width="600" height="250">
 
