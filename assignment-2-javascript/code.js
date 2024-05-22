@@ -1,5 +1,4 @@
-function saveName(event) {
-  event.preventDefault
+function saveName() {
   const usersNameInput = document.getElementById("usersName")
   const usersName = usersNameInput.value
   console.log(usersName)
