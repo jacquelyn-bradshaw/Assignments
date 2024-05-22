@@ -4,6 +4,9 @@ function saveName(event) {
   const usersName = usersNameInput.value
   console.log(usersName)
 
+  const form = document.getElementById("usersNameInputForm")
+  form.style.display = "none"
+
   const usersNameParagraph = document.getElementById("usersNameParagraph")
   usersNameParagraph.textContent = `Hi ${usersName}`
 
