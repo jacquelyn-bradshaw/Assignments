@@ -29,8 +29,14 @@
       <p>If it is not, choose <strong>NO</strong></p>
     </div>
     <div id="gameButtons">
-      <button type="button">YES</button>
-      <button type="button">NO</button>
+      <button type="button" data-id="yes" onclick="answerClicked(event)">
+        YES
+      </button>
+      <button type="button" data-id="no" onclick="answerClicked(event)">
+        NO
+      </button>
     </div>
+    <ul id="wordToBeRead"></ul>
+    <div id="congratulationsMessage"></div>
   </body>
 </html>
