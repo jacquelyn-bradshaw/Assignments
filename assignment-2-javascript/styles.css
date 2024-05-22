@@ -24,7 +24,7 @@ body {
   gap: 12px;
  }
 
- label {
+ #usersNameInputForm label {
   font-size: 30px;
  }
 
@@ -35,14 +35,14 @@ body {
   gap: 10px;
  }
 
- input {
+ #usersNameInputForm input {
   width: 300px;
   height: 30px;
   font-size: 24px;
   text-align: center;
  }
 
- button {
+ #usersNameInputForm button {
   border-radius: 10px;
   background-color: transparent;
   border-style: none;
@@ -64,3 +64,18 @@ body {
   font-size: 24px;
   padding: 2px;
  }
+
+#gameButtons {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+#gameButtons button {
+  font-size: 30px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 176);
+}

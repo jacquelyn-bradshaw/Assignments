@@ -12,4 +12,7 @@ function saveName(event) {
 
   const gameInstructionsDiv = document.getElementById("gameInstructions")
   gameInstructionsDiv.style.display = "block"
+
+  const gameButtons = document.getElementById("gameButtons")
+  gameButtons.style.display = "flex"
 }
