@@ -31,13 +31,6 @@ function displayWordToBeRead () {
   }
 
   console.log(wordNumber)
-
-  if (wordNumber+1 !== wordsArray.length) {
-    wordNumber ++
-  } else {
-    congratulationsMessage()
-  }
-
 }
 
 function answerClicked(event) {
@@ -45,10 +38,16 @@ function answerClicked(event) {
   const buttonClicked = event.target.dataset.id
   console.log(buttonClicked)
 
-  if (buttonClicked === wordsArray[0].real) {
+  if (buttonClicked === wordsArray[wordNumber].real) {
     console.log("Your correct")
   } else {
     console.log("Try again")
+  }
+
+  if (wordNumber+1 !== wordsArray.length) {
+    wordNumber ++
+  } else {
+    congratulationsMessage()
   }
 
   displayWordToBeRead()
