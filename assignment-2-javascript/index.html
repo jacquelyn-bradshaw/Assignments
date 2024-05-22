@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Themed real or not real word reading game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Train the Tractors</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./code.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1>Train the Tractors</h1>
+    <form>
+      <label for="usersName">What is your name?</label>
+      <div id="formDiv">
+        <input id="usersName" type="text" required />
+        <button type="button" onclick="saveName(event)">&#9989;</button>
+      </div>
+    </form>
+    <p id="usersNameParagraph"></p>
+    <div id="gameInstructions">
+      <p>Have the tractors created a real word</p>
+      <p>If it is a real word, choose <strong>YES</strong></p>
+      <p>If it is not, choose <strong>NO</strong></p>
+    </div>
+  </body>
 </html>
