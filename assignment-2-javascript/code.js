@@ -1,6 +1,21 @@
 const yesButton = document.getElementById("yesButton")
 const noButton = document.getElementById("noButton")
 
+wordNumber = 0
+
+const wordsArray = [
+  {word: "grain", real: "yes"},
+  {word: "mub", real: "no"},
+  {word: "trees", real: "yes"},
+  {word: "seed", real: "yes"},
+  {word: "grass", real: "yes"},
+  {word: "crod", real: "no"},
+  {word: "cab", real: "yes"},
+  {word: "farm", real: "yes"},
+  {word: "banure", real: "no"},
+  {word: "harvest", real: "yes"},
+]
+
 function saveName() {
   const usersNameInput = document.getElementById("usersName")
   const usersName = usersNameInput.value
@@ -22,7 +37,7 @@ function saveName() {
 }
 
 function displayWordToBeRead() {
-
+  const wordToBeReadElement = document.getElementById("wordToBeRead")
   wordToBeReadElement.replaceChildren()
   yesButton.style.backgroundColor = "rgb(245, 245, 176)"
   noButton.style.backgroundColor = "rgb(245, 245, 176)"
@@ -47,12 +62,14 @@ function answerClicked(event) {
     } else {
       noButton.style.backgroundColor = "green"
     }
+    scoreTracker(true)
   } else {
     if (buttonClicked === "yes") {
       yesButton.style.backgroundColor = "red"
     } else {
       noButton.style.backgroundColor = "red"
     }
+    scoreTracker(false)
   }
 
   if (wordNumber+1 !== wordsArray.length) {
@@ -64,8 +81,13 @@ function answerClicked(event) {
   setTimeout(displayWordToBeRead, 2000)
 }
 
-function scoreTracker() {
-  
+function scoreTracker(isCorrect) {
+  const scoreTrackerWord = document.querySelector("[data-id=" + CSS.escape(wordNumber+1) + "]")
+  if (isCorrect) {
+    scoreTrackerWord.style.backgroundColor = "green"
+  } else {
+    scoreTrackerWord.style.backgroundColor = "red"
+  }
 }
 
 function congratulationsMessage() {
@@ -74,20 +96,3 @@ function congratulationsMessage() {
   const congratulationsMessageElement = document.getElementById("congratulationsMessage")
   congratulationsMessageElement.appendChild(paragraphElement)
 }
-
-wordNumber = 0;
-
-const wordToBeReadElement = document.getElementById("wordToBeRead")
-
-const wordsArray = [
-  {word: "grain", real: "yes"},
-  {word: "mub", real: "no"},
-  {word: "trees", real: "yes"},
-  {word: "seed", real: "yes"},
-  {word: "grass", real: "yes"},
-  {word: "crod", real: "no"},
-  {word: "cab", real: "yes"},
-  {word: "farm", real: "yes"},
-  {word: "banure", real: "no"},
-  {word: "harvest", real: "yes"},
-]
