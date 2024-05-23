@@ -3,7 +3,8 @@ const noButton = document.getElementById("noButton")
 const wordToBeReadElement = document.getElementById("wordToBeRead")
 const gameButtons = document.getElementById("gameButtons")
 
-wordNumber = 0
+let wordNumber = 0
+let score = 0
 
 const wordsArray = [
   {word: "grain", real: "yes"},
@@ -75,16 +76,17 @@ function answerClicked(event) {
   if (wordNumber+1 !== wordsArray.length) {
     wordNumber ++
   } else {
-    setTimeout(congratulationsMessage, 1000)
+    setTimeout(congratulationsMessage, 500)
   }
 
-  setTimeout(displayWordToBeRead, 1000)
+  setTimeout(displayWordToBeRead, 500)
 }
 
 function scoreTracker(isCorrect) {
   const scoreTrackerWord = document.querySelector("[data-id=" + CSS.escape(wordNumber+1) + "]")
   if (isCorrect) {
     scoreTrackerWord.style.backgroundColor = "green"
+    score++
   } else {
     scoreTrackerWord.style.backgroundColor = "red"
   }
@@ -92,7 +94,7 @@ function scoreTracker(isCorrect) {
 
 function congratulationsMessage() {
   const paragraphElement = document.createElement("p")
-  paragraphElement.textContent = "Well done"
+  paragraphElement.textContent = `Well done, your score was ${score} out of 10`
   const congratulationsMessageElement = document.getElementById("congratulationsMessage")
   congratulationsMessageElement.appendChild(paragraphElement)
   wordToBeReadElement.style.display = "none"
