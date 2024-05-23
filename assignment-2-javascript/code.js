@@ -40,6 +40,8 @@ function saveName() {
 
 function displayWordToBeRead() {
   wordToBeReadElement.replaceChildren()
+  yesButton.disabled = false
+  noButton.disabled = false
   yesButton.style.backgroundColor = "rgb(245, 245, 176)"
   noButton.style.backgroundColor = "rgb(245, 245, 176)"
 
@@ -60,15 +62,19 @@ function answerClicked(event) {
   if (buttonClicked === wordsArray[wordNumber].real) {
     if (buttonClicked === "yes") {
       yesButton.style.backgroundColor = "green"
+      noButton.disabled = true
     } else {
       noButton.style.backgroundColor = "green"
+      yesButton.disabled = true
     }
     scoreTracker(true)
   } else {
     if (buttonClicked === "yes") {
       yesButton.style.backgroundColor = "red"
+      noButton.disabled = true
     } else {
       noButton.style.backgroundColor = "red"
+      yesButton.disabled = true
     }
     scoreTracker(false)
   }
@@ -94,7 +100,7 @@ function scoreTracker(isCorrect) {
 
 function congratulationsMessage() {
   const paragraphElement = document.createElement("p")
-  paragraphElement.textContent = `Well done, your score was ${score} out of 10`
+  paragraphElement.innerHTML = `Well done! <br /> Your score was ${score} out of 10`
   const congratulationsMessageElement = document.getElementById("congratulationsMessage")
   congratulationsMessageElement.appendChild(paragraphElement)
   wordToBeReadElement.style.display = "none"
