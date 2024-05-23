@@ -34,8 +34,6 @@ function displayWordToBeRead () {
     listElement.textContent = array[i]
     wordToBeReadElement.appendChild(listElement)
   }
-
-  console.log(wordNumber)
 }
 
 function answerClicked(event) {
