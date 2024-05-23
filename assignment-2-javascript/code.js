@@ -1,12 +1,13 @@
+// Elements given global scope so they can be used in mulitple functions
 const yesButton = document.getElementById("yesButton")
 const noButton = document.getElementById("noButton")
 const wordToBeReadElement = document.getElementById("wordToBeRead")
 const tractorsDisplay = document.getElementById("tractorsDisplay")
 const gameButtons = document.getElementById("gameButtons")
 
+// Global variables used in multiple functions
 let wordNumber = 0
 let score = 0
-let previousRandomNumber = 0
 
 const wordsArray = [
   {word: "grain", real: "yes"},
@@ -29,10 +30,13 @@ const tractorImageArray = [
   "./images/yellowTractor.png"
 ]
 
+// Global variable so it is not reset during each function call
+let previousRandomNumber = 0
+
 function saveName() {
   const usersNameInput = document.getElementById("usersName")
   const usersName = usersNameInput.value
-  console.log(usersName)
+  console.log(`Inputted name: ${usersName}`)
 
   const form = document.getElementById("usersNameInputForm")
   form.style.display = "none"
@@ -49,18 +53,22 @@ function saveName() {
 }
 
 function displayWordToBeRead() {
+  // Reset children back to 0
   wordToBeReadElement.replaceChildren()
   tractorsDisplay.replaceChildren()
+
+  // Reset buttons
   yesButton.disabled = false
   noButton.disabled = false
   yesButton.style.backgroundColor = "rgb(245, 245, 176)"
   noButton.style.backgroundColor = "rgb(245, 245, 176)"
 
-  const array = wordsArray[wordNumber].word.split("")
+  // Split the word to be read into individual characters
+  const splitWordArray = wordsArray[wordNumber].word.split("")
 
-  for (i=0; i < array.length; i++) {
+  for (i=0; i < splitWordArray.length; i++) {
     const listElement = document.createElement("li")
-    listElement.textContent = array[i]
+    listElement.textContent = splitWordArray[i]
     wordToBeReadElement.appendChild(listElement)
     const imageElement = document.createElement("img")
     const image = pickImage()
@@ -72,7 +80,6 @@ function displayWordToBeRead() {
 function answerClicked(event) {
   // How to find out which button was clicked
   const buttonClicked = event.target.dataset.id
-  console.log(buttonClicked)
 
   if (buttonClicked === wordsArray[wordNumber].real) {
     if (buttonClicked === "yes") {
@@ -105,26 +112,23 @@ function answerClicked(event) {
 
 function pickImage() {
   const randomNumber = Math.floor(Math.random() * tractorImageArray.length)
-  console.log(`Generated random Number: ${randomNumber}`)
   if (randomNumber === previousRandomNumber) {
-    console.log("in if statement")
-    
-    console.log(`Previous random Number in if statement: ${previousRandomNumber}`)
+    // Immediately rerun the function if the random number is the same as the previous random number
     return pickImage()
   }
-  previousRandomNumber = randomNumber;
-  console.log(`Previous random Number out of if statement: ${previousRandomNumber}`)
+  previousRandomNumber = randomNumber
   const imageToUse = tractorImageArray[randomNumber]
   return imageToUse
 }
 
 function scoreTracker(isCorrect) {
-  const scoreTrackerWord = document.querySelector("[data-id=" + CSS.escape(wordNumber+1) + "]")
+  // Access the correct score tracker circle for the current word number
+  const scoreTrackerDisplay = document.querySelector("[data-id=" + CSS.escape(wordNumber+1) + "]")
   if (isCorrect) {
-    scoreTrackerWord.style.backgroundColor = "green"
+    scoreTrackerDisplay.style.backgroundColor = "green"
     score++
   } else {
-    scoreTrackerWord.style.backgroundColor = "red"
+    scoreTrackerDisplay.style.backgroundColor = "red"
   }
 }
 
