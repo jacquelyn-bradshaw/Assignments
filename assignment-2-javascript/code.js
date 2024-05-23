@@ -1,3 +1,6 @@
+const yesButton = document.getElementById("yesButton")
+const noButton = document.getElementById("noButton")
+
 function saveName() {
   const usersNameInput = document.getElementById("usersName")
   const usersName = usersNameInput.value
@@ -21,6 +24,8 @@ function saveName() {
 function displayWordToBeRead () {
 
   wordToBeReadElement.replaceChildren()
+  yesButton.style.backgroundColor = "rgb(245, 245, 176)"
+  noButton.style.backgroundColor = "rgb(245, 245, 176)"
 
   const array = wordsArray[wordNumber].word.split("")
 
@@ -39,9 +44,17 @@ function answerClicked(event) {
   console.log(buttonClicked)
 
   if (buttonClicked === wordsArray[wordNumber].real) {
-    console.log("Your correct")
+    if (buttonClicked === "yes") {
+      yesButton.style.backgroundColor = "green"
+    } else {
+      noButton.style.backgroundColor = "green"
+    }
   } else {
-    console.log("Try again")
+    if (buttonClicked === "yes") {
+      yesButton.style.backgroundColor = "red"
+    } else {
+      noButton.style.backgroundColor = "red"
+    }
   }
 
   if (wordNumber+1 !== wordsArray.length) {
@@ -50,7 +63,7 @@ function answerClicked(event) {
     congratulationsMessage()
   }
 
-  displayWordToBeRead()
+  setTimeout(displayWordToBeRead, 2000)
 }
 
 function congratulationsMessage() {
@@ -70,5 +83,9 @@ const wordsArray = [
   {word: "trees", real: "yes"},
   {word: "seed", real: "yes"},
   {word: "grass", real: "yes"},
-  {word: "cab", real: "yes"}
+  {word: "crod", real: "no"},
+  {word: "cab", real: "yes"},
+  {word: "farm", real: "yes"},
+  {word: "banure", real: "no"},
+  {word: "harvest", real: "yes"},
 ]
