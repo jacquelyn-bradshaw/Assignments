@@ -1,5 +1,7 @@
 const yesButton = document.getElementById("yesButton")
 const noButton = document.getElementById("noButton")
+const wordToBeReadElement = document.getElementById("wordToBeRead")
+const gameButtons = document.getElementById("gameButtons")
 
 wordNumber = 0
 
@@ -30,14 +32,12 @@ function saveName() {
   const gameInstructionsDiv = document.getElementById("gameInstructions")
   gameInstructionsDiv.style.display = "block"
 
-  const gameButtons = document.getElementById("gameButtons")
   gameButtons.style.display = "flex"
 
   displayWordToBeRead()
 }
 
 function displayWordToBeRead() {
-  const wordToBeReadElement = document.getElementById("wordToBeRead")
   wordToBeReadElement.replaceChildren()
   yesButton.style.backgroundColor = "rgb(245, 245, 176)"
   noButton.style.backgroundColor = "rgb(245, 245, 176)"
@@ -75,10 +75,10 @@ function answerClicked(event) {
   if (wordNumber+1 !== wordsArray.length) {
     wordNumber ++
   } else {
-    congratulationsMessage()
+    setTimeout(congratulationsMessage, 1000)
   }
 
-  setTimeout(displayWordToBeRead, 2000)
+  setTimeout(displayWordToBeRead, 1000)
 }
 
 function scoreTracker(isCorrect) {
@@ -95,4 +95,6 @@ function congratulationsMessage() {
   paragraphElement.textContent = "Well done"
   const congratulationsMessageElement = document.getElementById("congratulationsMessage")
   congratulationsMessageElement.appendChild(paragraphElement)
+  wordToBeReadElement.style.display = "none"
+  gameButtons.style.display = "none"
 }
