@@ -38,6 +38,11 @@ function saveName() {
   const usersName = usersNameInput.value
   console.log(`Inputted name: ${usersName}`)
 
+  if (usersName.trim() === "") {
+    window.alert("Please enter your name")
+    return
+  }
+
   const form = document.getElementById("usersNameInputForm")
   form.style.display = "none"
 
