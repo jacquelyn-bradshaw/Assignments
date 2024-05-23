@@ -21,7 +21,7 @@ function saveName() {
   displayWordToBeRead()
 }
 
-function displayWordToBeRead () {
+function displayWordToBeRead() {
 
   wordToBeReadElement.replaceChildren()
   yesButton.style.backgroundColor = "rgb(245, 245, 176)"
@@ -62,6 +62,10 @@ function answerClicked(event) {
   }
 
   setTimeout(displayWordToBeRead, 2000)
+}
+
+function scoreTracker() {
+  
 }
 
 function congratulationsMessage() {

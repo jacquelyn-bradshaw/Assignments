@@ -7,12 +7,32 @@ body {
   background-size: cover;
  }
 
+ #titleAndScoreTrackerDisplay {
+  display: grid;
+  grid-template-columns: auto 200px;
+ }
+
  h1 {
   font-size: 72px;
+  padding-left: 200px;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #43a047, #f9a825, #ff5722);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 20px;
+ }
+
+ #scoreTrackerDisplay {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: 20;
+  gap: 8px;
+ }
+
+ #scoreTrackerDisplay button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
  }
 
  #usersNameInputForm {
