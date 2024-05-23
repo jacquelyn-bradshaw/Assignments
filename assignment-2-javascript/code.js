@@ -1,6 +1,7 @@
 const yesButton = document.getElementById("yesButton")
 const noButton = document.getElementById("noButton")
 const wordToBeReadElement = document.getElementById("wordToBeRead")
+const tractorsDisplay = document.getElementById("tractorsDisplay")
 const gameButtons = document.getElementById("gameButtons")
 
 let wordNumber = 0
@@ -40,6 +41,7 @@ function saveName() {
 
 function displayWordToBeRead() {
   wordToBeReadElement.replaceChildren()
+  tractorsDisplay.replaceChildren()
   yesButton.disabled = false
   noButton.disabled = false
   yesButton.style.backgroundColor = "rgb(245, 245, 176)"
@@ -51,6 +53,9 @@ function displayWordToBeRead() {
     const listElement = document.createElement("li")
     listElement.textContent = array[i]
     wordToBeReadElement.appendChild(listElement)
+    const imageElement = document.createElement("img")
+    imageElement.src = "./images/blueTractor.png"
+    tractorsDisplay.appendChild(imageElement)
   }
 }
 
@@ -105,4 +110,5 @@ function congratulationsMessage() {
   congratulationsMessageElement.appendChild(paragraphElement)
   wordToBeReadElement.style.display = "none"
   gameButtons.style.display = "none"
+  tractorsDisplay.style.display = "none"
 }
