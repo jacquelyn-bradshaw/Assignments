@@ -6,6 +6,7 @@ const gameButtons = document.getElementById("gameButtons")
 
 let wordNumber = 0
 let score = 0
+let previousRandomNumber = 0
 
 const wordsArray = [
   {word: "grain", real: "yes"},
@@ -18,6 +19,14 @@ const wordsArray = [
   {word: "farm", real: "yes"},
   {word: "banure", real: "no"},
   {word: "harvest", real: "yes"},
+]
+
+const tractorImageArray = [
+  "./images/blueTractor.png",
+  "./images/orangeTractor.png",
+  "./images/purpleTractor.png",
+  "./images/redTractor.png",
+  "./images/yellowTractor.png"
 ]
 
 function saveName() {
@@ -54,7 +63,8 @@ function displayWordToBeRead() {
     listElement.textContent = array[i]
     wordToBeReadElement.appendChild(listElement)
     const imageElement = document.createElement("img")
-    imageElement.src = "./images/blueTractor.png"
+    const image = pickImage()
+    imageElement.src = image
     tractorsDisplay.appendChild(imageElement)
   }
 }
@@ -91,6 +101,21 @@ function answerClicked(event) {
   }
 
   setTimeout(displayWordToBeRead, 500)
+}
+
+function pickImage() {
+  const randomNumber = Math.floor(Math.random() * tractorImageArray.length)
+  console.log(`Generated random Number: ${randomNumber}`)
+  if (randomNumber === previousRandomNumber) {
+    console.log("in if statement")
+    
+    console.log(`Previous random Number in if statement: ${previousRandomNumber}`)
+    return pickImage()
+  }
+  previousRandomNumber = randomNumber;
+  console.log(`Previous random Number out of if statement: ${previousRandomNumber}`)
+  const imageToUse = tractorImageArray[randomNumber]
+  return imageToUse
 }
 
 function scoreTracker(isCorrect) {
