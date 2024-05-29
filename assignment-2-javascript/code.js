@@ -107,12 +107,11 @@ function answerClicked(event) {
   }
 
   if (wordNumber+1 !== wordsArray.length) {
-    wordNumber ++
+    wordNumber++
+    setTimeout(displayWordToBeRead, 500)
   } else {
     setTimeout(congratulationsMessage, 500)
   }
-
-  setTimeout(displayWordToBeRead, 500)
 }
 
 function pickImage() {
