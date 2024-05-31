@@ -19,7 +19,7 @@ split() takes a string and splits it into individual characters or words and sto
 To create an array of degree streams:
 
 ```
-const degreeStreams = [“software engineering”, “data”, “full stack”, “product management” ]
+const degreeStreams = [“software engineering”, “data”, “full stack”, “product management”]
 ```
 
 To remove one element from the beginning of the array:
@@ -28,7 +28,7 @@ To remove one element from the beginning of the array:
 degreeStreams.shift()
 ```
 
-This will leave you with the array degreeStreams holding the elements ["data", "full stack", "product management"].
+This will leave you with the array `degreeStreams` holding the elements `["data", "full stack", "product management"]`.
 
 To remove one more element from the beginning of the array:
 
@@ -36,7 +36,7 @@ To remove one more element from the beginning of the array:
 degreeStreams.shift()
 ```
 
-This will leave you with the array degreeStreams holding the elements ["full stack", "product management"].
+This will leave you with the array `degreeStreams` holding the elements `["full stack", "product management"]`.
 
 Now I can add the two elements I removed back into the beginning of the array:
 
@@ -44,13 +44,15 @@ Now I can add the two elements I removed back into the beginning of the array:
 degreeStreams.unshift(“software engineering”, “data”)
 ```
 
+This will leave you with the array `degreeStreams` holding the elements `["software engineering", "data", "full stack", "product management"]`.
+
 To split one of the elements in the array into individual characters, you can use:
 
 ```
 degreeStreams[1].split(“”)
 ```
 
-This will split the second element "data" into an array of individual characters e.g. ["d", "a", "t", "a"]
+This will split the second element "data" into an array of individual characters e.g. `["d", "a", "t", "a"]`
 
 To split one of the elements in the array into individual words, you can use:
 
@@ -58,7 +60,7 @@ To split one of the elements in the array into individual words, you can use:
 degreeStreams[0].split(“ ”)
 ```
 
-This will split the first element "software engineering" into an array of individual words e.g. ["software", "engineering"].
+This will split the first element "software engineering" into an array of individual words e.g. `["software", "engineering"]`.
 
 ## 2.2 Object methods
 
