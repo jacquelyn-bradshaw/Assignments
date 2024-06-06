@@ -1,3 +1,5 @@
+USE princesses;
+
 -- A table showing the average age of the princesses rounded to the nearest whole number
 SELECT
 ROUND(AVG(p.age), 0)
