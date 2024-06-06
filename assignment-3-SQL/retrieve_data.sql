@@ -1,5 +1,10 @@
 USE princesses;
 
+-- A table of all princesses and their information stored in the princesses table
+SELECT *
+FROM princesses p
+ORDER BY p.name;
+
 -- A table of all film names stored in the films table
 SELECT f.name
 FROM films f
