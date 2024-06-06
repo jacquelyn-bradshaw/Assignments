@@ -1,38 +1,40 @@
 USE princesses;
 
 INSERT INTO films
-(film_id, name, last_watched)
+(film_id, name, princess_id, year_released, year_rereleased, last_watched)
 VALUES
-("F1", "Snow White and the Seven Dwarfs", "2023-04-17"),
-("F2", "Cinderella", "2023-12-20"),
-("F3", "Sleeping Beauty", "2023-02-18"),
-("F4", "The Little Mermaid", "2023-08-03"),
-("F5", "Beauty and the Beast", "2023-11-07"),
-("F6", "Aladdin", "2024-03-30"),
-("F7", "Pocahontas", "2023-03-16"),
-("F8", "Mulan", "2024-05-01"),
-("F9", "The Princess and the Frog", "2023-09-30"),
-("F10", "Tangled", "2023-09-30"),
-("F11", "Brave", "2024-03-27"),
-("F12", "Moana", "2024-01-11"),
-("F13", "Raya and the Last Dragon", "2024-06-02");
+("F1", "Snow White and the Seven Dwarfs", 1, 1937, NULL, "2023-04-17"),
+("F2", "Cinderella", 2, 1950, 2015, "2023-12-20"),
+("F3", "Sleeping Beauty", 3, 1959, NULL, "2023-02-18"),
+("F4", "The Little Mermaid", 4, 1989, 2023, "2023-08-03"),
+("F5", "Beauty and the Beast", 5, 1991, 2017, "2023-11-07"),
+("F6", "Aladdin", 6, 1992, 2019, "2024-03-30"),
+("F7", "Pocahontas", 7, 1995, 1998, "2023-03-16"),
+("F8", "Mulan", 8, 1998, 2020, "2024-05-01"),
+("F9", "The Princess and the Frog", 9, 2009, NULL, "2023-09-30"),
+("F10", "Tangled", 10, 2010, NULL, "2023-09-30"),
+("F11", "Brave", 11, 2012, NULL, "2024-03-27"),
+("F12", "Moana", 12, 2016, NULL, "2024-01-11"),
+("F13", "Raya and the Last Dragon", 13, 2021, NULL, "2024-06-02"),
+("F14", "Pocahontas II", 7, 2000, NULL, NULL),
+("F15", "Mulan II", 8, 2014, NULL, NULL);
 
 INSERT INTO princesses
-(name, film_id, age, first_home, second_home, song)
+(name, age, first_home, second_home, song)
 VALUES
-("Snow White", "F1", 14, "Cottage of the Seven Dwarfs", "The Queen's Castle", "I'm Wishing"),
-("Cinderella", "F2", 19, "The Kings Castle", NULL, "A Dream Is a Wish Your Heart Makes"),
-("Aurora", "F3", 16, "King Stefan's Castle", NULL, "I Wonder"),
-("Ariel", "F4", 16, "King Triton's Palace", "Prince Eric's Castle", "Part of Your World"),
-("Belle", "F5", 17, "Beast's Castle", NULL, "Belle"),
-("Jasmine", "F6", 15, "The Sultan's Palace", NULL, "Speechless"),
-("Pocahontas", "F7", 18, "Tribe Village", "Diving Cliff", "Just Around the Riverbend"),
-("Mulan", "F8", 16, "Fa Family Temple", "Emperor's Palace", "Reflection"),
-("Tiana", "F9", 19, "Tiana's Palace", NULL, "Almost There"),
-("Rapunzel", "F10", 18, "Rapunzel's Tower", "Corona Castle", "When Will My Life Begin"),
-("Merida", "F11", 16, "Castle DunBroch", NULL, "Touch the Sky"),
-("Moana", "F12", 16, "Motunui", NULL, "How Far I'll Go"),
-("Raya", "F13", 18, "Heart Palace", NULL, "Lead the Way");
+("Snow White", 14, "Cottage of the Seven Dwarfs", "The Queen's Castle", "I'm Wishing"),
+("Cinderella", 19, "The Kings Castle", NULL, "A Dream Is a Wish Your Heart Makes"),
+("Aurora", 16, "King Stefan's Castle", NULL, "I Wonder"),
+("Ariel", 16, "King Triton's Palace", "Prince Eric's Castle", "Part of Your World"),
+("Belle", 17, "Beast's Castle", NULL, "Belle"),
+("Jasmine", 15, "The Sultan's Palace", NULL, "Speechless"),
+("Pocahontas", 18, "Tribe Village", "Diving Cliff", "Just Around the Riverbend"),
+("Mulan", 16, "Fa Family Temple", "Emperor's Palace", "Reflection"),
+("Tiana", 19, "Tiana's Palace", NULL, "Almost There"),
+("Rapunzel", 18, "Rapunzel's Tower", "Corona Castle", "When Will My Life Begin"),
+("Merida", 16, "Castle DunBroch", NULL, "Touch the Sky"),
+("Moana", 16, "Motunui", NULL, "How Far I'll Go"),
+("Raya", 18, "Heart Palace", NULL, "Lead the Way");
 
 INSERT INTO princesses_owned
 (princesses_owned_id, princess_id, owned, date_owned)
