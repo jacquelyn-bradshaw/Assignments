@@ -25,4 +25,4 @@ FOREIGN KEY(princess_id) REFERENCES princesses(princess_id)
 );
 
 ALTER TABLE films
-ADD UNIQUE(name)
+ADD UNIQUE(name);
