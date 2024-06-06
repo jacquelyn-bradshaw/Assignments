@@ -18,7 +18,7 @@ VALUES
 ("F13", "Raya and the Last Dragon", "2024-06-02");
 
 INSERT INTO princesses
-(name, film_id, age, 1st_home, 2nd_home, song)
+(name, film_id, age, first_home, second_home, song)
 VALUES
 ("Snow White", "F1", 14, "Cottage of the Seven Dwarfs", "The Queen's Castle", "I'm Wishing"),
 ("Cinderella", "F2", 19, "The Kings Castle", NULL, "A Dream Is a Wish Your Heart Makes"),
