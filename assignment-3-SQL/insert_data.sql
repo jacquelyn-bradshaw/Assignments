@@ -1,5 +1,22 @@
 USE princesses;
 
+INSERT INTO princesses
+(name, age, first_home, second_home, song)
+VALUES
+("Snow White", 14, "Cottage of the Seven Dwarfs", "The Queen's Castle", "I'm Wishing"),
+("Cinderella", 19, "The Kings Castle", NULL, "A Dream Is a Wish Your Heart Makes"),
+("Aurora", 16, "King Stefan's Castle", NULL, "I Wonder"),
+("Ariel", 16, "King Triton's Palace", "Prince Eric's Castle", "Part of Your World"),
+("Belle", 17, "Beast's Castle", NULL, "Belle"),
+("Jasmine", 15, "The Sultan's Palace", NULL, "Speechless"),
+("Pocahontas", 18, "Tribe Village", "Diving Cliff", "Just Around the Riverbend"),
+("Mulan", 16, "Fa Family Temple", "Emperor's Palace", "Reflection"),
+("Tiana", 19, "Tiana's Palace", NULL, "Almost There"),
+("Rapunzel", 18, "Rapunzel's Tower", "Corona Castle", "When Will My Life Begin"),
+("Merida", 16, "Castle DunBroch", NULL, "Touch the Sky"),
+("Moana", 16, "Motunui", NULL, "How Far I'll Go"),
+("Raya", 18, "Heart Palace", NULL, "Lead the Way");
+
 INSERT INTO films
 (film_id, name, princess_id, year_released, year_rereleased, last_watched)
 VALUES
@@ -18,23 +35,6 @@ VALUES
 ("F13", "Raya and the Last Dragon", 13, 2021, NULL, "2024-06-02"),
 ("F14", "Pocahontas II", 7, 2000, NULL, NULL),
 ("F15", "Mulan II", 8, 2014, NULL, NULL);
-
-INSERT INTO princesses
-(name, age, first_home, second_home, song)
-VALUES
-("Snow White", 14, "Cottage of the Seven Dwarfs", "The Queen's Castle", "I'm Wishing"),
-("Cinderella", 19, "The Kings Castle", NULL, "A Dream Is a Wish Your Heart Makes"),
-("Aurora", 16, "King Stefan's Castle", NULL, "I Wonder"),
-("Ariel", 16, "King Triton's Palace", "Prince Eric's Castle", "Part of Your World"),
-("Belle", 17, "Beast's Castle", NULL, "Belle"),
-("Jasmine", 15, "The Sultan's Palace", NULL, "Speechless"),
-("Pocahontas", 18, "Tribe Village", "Diving Cliff", "Just Around the Riverbend"),
-("Mulan", 16, "Fa Family Temple", "Emperor's Palace", "Reflection"),
-("Tiana", 19, "Tiana's Palace", NULL, "Almost There"),
-("Rapunzel", 18, "Rapunzel's Tower", "Corona Castle", "When Will My Life Begin"),
-("Merida", 16, "Castle DunBroch", NULL, "Touch the Sky"),
-("Moana", 16, "Motunui", NULL, "How Far I'll Go"),
-("Raya", 18, "Heart Palace", NULL, "Lead the Way");
 
 INSERT INTO princesses_owned
 (princesses_owned_id, princess_id, owned, date_owned)
