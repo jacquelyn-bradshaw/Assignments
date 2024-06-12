@@ -14,5 +14,5 @@ ORDER BY f.last_watched;
 -- A table showing a list of films that were last watched over a year ago
 SELECT f.name
 FROM films f
-WHERE last_watched < CURRENT_DATE() - INTERVAL 1 YEAR
+WHERE f.last_watched < CURRENT_DATE() - INTERVAL 1 YEAR
 ORDER BY f.name;
