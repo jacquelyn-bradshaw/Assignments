@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Train the Tractors</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./code.js" defer></script>
+  </head>
+  <body>
+    <section id="titleAndScoreTrackerDisplay">
+      <h1>Train the Tractors</h1>
+      <div id="scoreTrackerDisplay">
+        <button data-id="1"></button>
+        <button data-id="2"></button>
+        <button data-id="3"></button>
+        <button data-id="4"></button>
+        <button data-id="5"></button>
+        <button data-id="6"></button>
+        <button data-id="7"></button>
+        <button data-id="8"></button>
+        <button data-id="9"></button>
+        <button data-id="10"></button>
+      </div>
+    </section>
+    <!--Return false added to onsubmit to stop the page reloading when submitted-->
+    <form id="usersNameInputForm" onsubmit="saveName(); return false">
+      <label for="usersName">What is your name?</label>
+      <div id="formDiv">
+        <input id="usersName" type="text" />
+        <button type="submit">&#9989;</button>
+      </div>
+    </form>
+    <p id="usersNameParagraph"></p>
+    <div id="gameInstructions">
+      <p>Have the tractors created a real word</p>
+      <p>If it is a real word, choose <strong>YES</strong></p>
+      <p>If it is not, choose <strong>NO</strong></p>
+    </div>
+    <div id="gameButtons">
+      <button
+        id="yesButton"
+        type="button"
+        data-id="yes"
+        onclick="answerClicked(event)"
+      >
+        YES
+      </button>
+      <button
+        id="noButton"
+        type="button"
+        data-id="no"
+        onclick="answerClicked(event)"
+      >
+        NO
+      </button>
+    </div>
+    <ul id="wordToBeRead"></ul>
+    <ul id="tractorsDisplay"></ul>
+    <div id="congratulationsMessage"></div>
+  </body>
+</html>
