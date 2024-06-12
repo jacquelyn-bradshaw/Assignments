@@ -1,4 +1,4 @@
-# Assignment 3 SQL
+# Assignment 3 - Data and MySQL
 
 **Princess Database**
 
