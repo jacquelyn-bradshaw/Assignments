@@ -16,7 +16,7 @@ I have created a stored procedure to change the date that a film stored in the f
 
 I would like to create a website/app for this database so my daughter could easily display the information stored and query the tables e.g. find films watched in a particular period, find films released after a certain date or find the names of the princesses that are owned or not owned. Also she would be able to update when a film was last watched.
 
-## EER diagram
+## ER diagram
 
 Diagram showing the design of my tables and table relations in the princesses database
 
