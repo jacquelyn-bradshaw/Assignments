@@ -40,8 +40,8 @@ ORDER BY p.name;
 
 /* A table showing all films and when they were released and rereleased if they were released
 or rereleased during or after 2010 */
-SELECT f.name, year_released, year_rereleased
+SELECT f.name, f.year_released, f.year_rereleased
 FROM films f
 WHERE f.year_released >= 2010
 OR f.year_rereleased >= 2010
-ORDER BY year_released DESC;
+ORDER BY f.year_released DESC;
