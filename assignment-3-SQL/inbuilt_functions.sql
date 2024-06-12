@@ -8,3 +8,8 @@ FROM princesses p;
 SELECT f.name,
 DATE_FORMAT(f.last_watched, "%W %e %M %Y") AS last_watched
 FROM films f;
+
+-- A table showing a list of films that were last watched over a year ago
+SELECT f.name
+FROM films f
+WHERE last_watched < CURRENT_DATE() - INTERVAL 1 YEAR;
