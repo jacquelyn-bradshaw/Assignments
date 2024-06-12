@@ -5,7 +5,8 @@ SELECT f.name, f.year_released, f.year_rereleased, f.last_watched,
 p.name, p.age, p.first_home, p.second_home, p.song
 FROM films f
 LEFT JOIN princesses p
-ON f.princess_id = p.princess_id;
+ON f.princess_id = p.princess_id
+ORDER BY f.name;
 
 -- A table of princess names for princesses that are owned
 SELECT p.name
