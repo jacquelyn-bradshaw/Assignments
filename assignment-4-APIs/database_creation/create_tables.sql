@@ -1,3 +1,6 @@
+USE scoreboard;
+
+
 CREATE TABLE
   users (
     user_id INTEGER AUTO_INCREMENT PRIMARY KEY,
