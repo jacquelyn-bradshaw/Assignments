@@ -20,7 +20,7 @@ I would like to create a website/app for this database so my daughter could easi
 
 Diagram showing the design of my tables and table relations in the princesses database
 
-<img src="../images/ER_diagram.png" alt="Screenshot of my EER diagram design" width="400" height="500">
+<img src="./ER_diagram.png" alt="Screenshot of my EER diagram design" width="400" height="500">
 
 ## Create the database
 
