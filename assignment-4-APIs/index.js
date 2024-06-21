@@ -37,6 +37,18 @@ app.get("/users", (req, res) => {
   })
 })
 
+app.get("/scoreboard", (req, res) => {
+  const sql = "SELECT u.name, s.score FROM scores s INNER JOIN users u ON s.user_id = u.user_id"
+
+  pool.query(sql, (error, results) => {
+    if (error) {
+      console.error("Error fetching scores:", error.message)
+      return res.status(500).json({error: "Database error"})
+    }
+    res.status(200).json(results)
+  })
+})
+
 app.post("/saveuser", (req, res) => {
   const {name} = req.body
 
@@ -47,6 +59,31 @@ app.post("/saveuser", (req, res) => {
       return res.status(500).json({error : "Database error"})
     }
     res.status(201).json({id: result.insertId, message: `User ${name} created successfully`})
+  })
+})
+
+app.post("/savescore", async (req, res) => {
+  const {name, score} = req.body
+  let user_id
+
+  const findUser = "SELECT user_id FROM users WHERE name = ?"
+  user_id = await new Promise((resolve, reject) => {
+    pool.query(findUser, [name], (error, result) => {
+      if (result.length == 0) {
+        console.log("Error finding user")
+        return res.status(500).json({error : "Database error"})
+      }
+      resolve(result[0].user_id)
+    }) 
+  })
+
+  const sql = "INSERT INTO scores (user_id, score) VALUES (?, ?)"
+  pool.query(sql, [user_id, score], (error, result) => {
+    if (error) {
+      console.log("Error inserting score:", error.message)
+      return res.status(500).json({error : "Database error"})
+    }
+    res.status(201).json({id: result.insertId, message: `Score: ${score} for ${name} added successfully`})
   })
 })
 
