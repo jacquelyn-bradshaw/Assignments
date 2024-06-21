@@ -38,7 +38,14 @@ app.get("/users", (req, res) => {
 })
 
 app.get("/scoreboard", (req, res) => {
-  const sql = "SELECT u.name, s.score FROM scores s INNER JOIN users u ON s.user_id = u.user_id"
+  const sql = `
+    SELECT
+      u.name,
+      s.score
+    FROM
+      scores s
+      INNER JOIN users u ON s.user_id = u.user_id
+  `
 
   pool.query(sql, (error, results) => {
     if (error) {
@@ -69,9 +76,14 @@ app.post("/savescore", async (req, res) => {
   const findUser = "SELECT user_id FROM users WHERE name = ?"
   userId = await new Promise((resolve, reject) => {
     pool.query(findUser, [name], (error, result) => {
+      if(error) {
+        console.log("Error finding user:", error.message)
+        return res.status(500).json({error : "Database error"})
+      }
+      
       if (result.length == 0) {
         console.log("Error finding user")
-        return res.status(500).json({error : "Database error"})
+        return res.status(404).json({error : "User not found"})
       }
       resolve(result[0].user_id)
     }) 
@@ -98,7 +110,7 @@ app.delete("/delete-score/:id", (req, res) => {
     }
 
     if (result.affectedRows === 0) {
-      return res.status(404).json({error: "score not found"})
+      return res.status(404).json({error: "Score not found"})
     }
 
     res.status(200).json({message: "Score deleted successfully"})
