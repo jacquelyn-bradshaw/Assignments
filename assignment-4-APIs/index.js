@@ -64,10 +64,10 @@ app.post("/saveuser", (req, res) => {
 
 app.post("/savescore", async (req, res) => {
   const {name, score} = req.body
-  let user_id
+  let userId
 
   const findUser = "SELECT user_id FROM users WHERE name = ?"
-  user_id = await new Promise((resolve, reject) => {
+  userId = await new Promise((resolve, reject) => {
     pool.query(findUser, [name], (error, result) => {
       if (result.length == 0) {
         console.log("Error finding user")
@@ -78,12 +78,30 @@ app.post("/savescore", async (req, res) => {
   })
 
   const sql = "INSERT INTO scores (user_id, score) VALUES (?, ?)"
-  pool.query(sql, [user_id, score], (error, result) => {
+  pool.query(sql, [userId, score], (error, result) => {
     if (error) {
       console.log("Error inserting score:", error.message)
       return res.status(500).json({error : "Database error"})
     }
     res.status(201).json({id: result.insertId, message: `Score: ${score} for ${name} added successfully`})
+  })
+})
+
+app.delete("/delete-score/:id", (req, res) => {
+  const scoreId = req.params.id
+
+  const sql = "DELETE FROM scores WHERE score_id = ?"
+  pool.query(sql, [scoreId], (error, result) => {
+    if (error) {
+      console.log("Error deleting score:", error.message)
+      return res.status(500).json({error: "Database error"})
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({error: "score not found"})
+    }
+
+    res.status(200).json({message: "Score deleted successfully"})
   })
 })
 
