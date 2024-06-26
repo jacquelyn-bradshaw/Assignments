@@ -1,5 +1,5 @@
 const express = require("express")
-const pool = require("./pool")
+const pool = require("./pool") // Imports the file where I created my MySQL connection pool
 const path = require("path")
 require("dotenv").config()
 
