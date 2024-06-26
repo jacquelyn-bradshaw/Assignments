@@ -4,8 +4,7 @@
   "description": "A GitHub repository to store my CFG Degree assignments.",
   "main": "assignment-4-APIs/index.js",
   "scripts": {
-    "start": "node assignment-4-APIs/index.js",
-    "test": "jest"
+    "start": "node assignment-4-APIs/index.js"
   },
   "keywords": [],
   "author": "",
