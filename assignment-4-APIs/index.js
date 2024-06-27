@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 // this enables the use of static files e.g CSS file
-app.use(express.static("assignment-4-APIs/public"))
+app.use(express.static("./public"))
 
 
 
