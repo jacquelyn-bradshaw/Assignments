@@ -2,6 +2,8 @@
 
 Scoreboard API. This API should allow users of my Train the Tractors app to create a user, view users, add a score to the scoreboard, view the scoreboard and delete a score from the scoreboard. Each users name is stored in the users table in the database along with an automatically generated user_id. Each score should include the name of the user(turned into the user_id in the code) and a score. These are saved in the scores tables in the database along with an automatically generated score_id.
 
+In future I would like to join my front-end Train the Tractors app created in assignment 2 to this API so that scores are automatically added to the scoreboard when a user completes the game. I would like to have a user interface for the scoreboard and a button for users to delete their scores. Admin could have access to a user interface for the users table and the option to delete users.
+
 ## Setting up the database
 
 In the database_creation folder you will find two files to set up the database and tables
