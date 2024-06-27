@@ -6,7 +6,7 @@ In future I would like to join my front-end Train the Tractors app created in as
 
 ## Setting up the database
 
-In the database_creation folder you will find two files to set up the database and tables
+In the database_creation folder you will find two files to set up the database and tables. This needs to be completed before you run the API.
 
 To create the database, run the create_database sql file.
 
