@@ -11,8 +11,6 @@ app.use(express.urlencoded({extended: true}))
 // this enables the use of static files e.g CSS file
 app.use(express.static("./public"))
 
-
-
 // creates a path to a file
 const filePathIndex = path.resolve(__dirname, "index.html");
 
@@ -54,7 +52,7 @@ app.get("/scoreboard", async(req, res) => {
     const [results] = await pool.query(sql)
     res.status(200).json(results)
   } catch (error) {
-    console.error("Error fetching score:", error.message)
+    console.error("Error fetching scores:", error.message)
     res.status(500).json({error: "Database error"})
   }
 })
@@ -93,6 +91,11 @@ app.post("/scoreboard", async(req, res) => {
     return res.status(400).json({message: "Please include a name and score"})
   }
 
+  if (isNaN(score)) {
+    console.log("score is not a number")
+    return res.status(400).json({message: "Please include a number for the score"})
+  }
+
   try {
     const findUser = "SELECT user_id FROM users WHERE name = ?"
     const [findUserResult] = await pool.query(findUser, [name])
@@ -109,7 +112,7 @@ app.post("/scoreboard", async(req, res) => {
 
     res.status(201).json({id: results.insertId, message: `A score of ${score} for ${name} has been added successfully`})
   } catch (error) {
-    console.log("Error inserting scores:", error.message)
+    console.log("Error inserting score:", error.message)
     res.status(500).json({error: "Database error"})
   }
 })
