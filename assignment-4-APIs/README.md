@@ -22,6 +22,8 @@ You will need to ensure that for `MYSQL_PASSWORD = password`, `password` matches
 
 ## Install dependencies
 
+Make sure your terminal is in the assignment-4-APIs folder.
+
 To install dependencies, run the following command in the terminal:
 
 ```
