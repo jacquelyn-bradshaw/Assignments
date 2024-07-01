@@ -92,7 +92,7 @@ app.post("/scoreboard", async(req, res) => {
   }
 
   if (isNaN(score)) {
-    console.log("score is not a number")
+    console.log("Score is not a number")
     return res.status(400).json({message: "Please include a number for the score"})
   }
 

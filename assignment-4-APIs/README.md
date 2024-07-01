@@ -98,6 +98,10 @@ If the name supplied does not match a user in the users table, a status 404 code
 
 ![Screenshot of the POST /scoreboard endpoint where no user is found](./screenshots/screenshot_POST_scoreboard_endpoint_user_not_found.png)
 
+If a user does not supply a number for the score, a status 400 code is shown along with an error message.
+
+![Screenshot of the POST /scoreboard endpoint where score is not a number](./screenshots/screenshot_POST_scoreboard_endpoint_score_not_a_number.png)
+
 ### DELETE /scoreboard/:id
 
 This endpoint uses Postman or equivalent to delete a score from the scores table. A score_id is needed in the path.
